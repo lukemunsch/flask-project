@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-{{ company[1]["name"] }}
-
 <h2>{{ page_title }}</h2>
 <p>The formation of the group grew out of a meeting Gandalf had with Thorin in Bree which kindled Thorin's interest in
     recapturing his long lost family inheritance. (Thorin's grandfather had been the king of the Lonely Mountain when
@@ -16,16 +14,35 @@
 {% for member in company %}
 
     <div class="row featurette">
-        <div class="col-md-7">
-            <h3>{{ member.name }}</h3>
-            <p>
-                {{ member.description }}
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="{{ member.image_source }}" alt="" class="featurette-image image-responsive">
-        </div>
+
+        {% if loop.index % 2 != 0 %}
+
+            <div class="col-md-7">
+                <h3>{{ loop.index }}. {{ member.name }}</h3>
+                <p>
+                    {{ member.description }}
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ member.image_source }}" alt="" class="featurette-image image-responsive">
+            </div>
+
+        {% else %}
+
+            <div class="col-md-5">
+                <img src="{{ member.image_source }}" alt="" class="featurette-image image-responsive">
+            </div>
+            <div class="col-md-7">
+                <h3>{{ loop.index }}. {{ member.name }}</h3>
+                <p>
+                    {{ member.description }}
+                </p>
+            </div>
+
+        {% endif %}
+
     </div>
+    <hr class="featurette-divider">
 {% endfor %}
 
 {% endblock %}

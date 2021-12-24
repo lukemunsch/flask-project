@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+
+{% for number in list_of_numbers %}
+    <p>{{ number }}</p>
+{% endfor %}
+
 <h2>{{ page_title }}</h2>
 <p>The formation of the group grew out of a meeting Gandalf had with Thorin in Bree which kindled Thorin's interest in
     recapturing his long lost family inheritance. (Thorin's grandfather had been the king of the Lonely Mountain when
@@ -15,12 +20,7 @@
     <div class="col-md-7">
         <h3>Thorin Oakenshield</h3>
         <p>
-            Thorin II was born in TA 2746 to Dwarf prince Thráin II in the city of the Lonely Mountain. Early in his
-            youth, he and the other Dwarves of the Lonely Mountain were forced to flee by the dragon Smaug in TA 2770.
-            While in exile, he quickly grew to become a capable warrior. This was demonstrated when he participated in
-            the Battle of Azanulbizar in TA 2799. He fought with one of the Dwarven armies beneath the East-gate of
-            Moria. At some point in the fighting, his shield broke, and using an oaken tree branch found on the ground
-            as a shield, he gained the epithet "Oakenshield," which would remain with him even in death.
+            Thorin II was born in TA 2746 to Dwarf prince Thráin II in the city of the Lonely Mountain. Early in his youth, he and the other Dwarves of the Lonely Mountain were forced to flee by the dragon Smaug in TA 2770. While in exile, he quickly grew to become a capable warrior. This was demonstrated when he participated in the Battle of Azanulbizar in TA 2799. He fought with one of the Dwarven armies beneath the East-gate of Moria. At some point in the fighting, his shield broke, and using an oaken tree branch found on the ground as a shield, he gained the epithet "Oakenshield," which would remain with him even in death.
         </p>
     </div>
     <div class="col-md-5">
